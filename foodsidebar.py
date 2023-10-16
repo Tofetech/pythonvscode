@@ -3,7 +3,7 @@ st.set_page_config(layout='wide')
 
 bill = 0
 
-mean = st.sidebar.subheader("food ordred")
+mean = st.sidebar.subheader("food ordered")
 
 meal1,meal2,meal3,meal4 = st.columns(4)
 

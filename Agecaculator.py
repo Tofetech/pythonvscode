@@ -11,5 +11,8 @@ age = currentyear - yearofbirth
 
 Internet = st.checkbox("Are you allowed to use internet")
 
+st.write('hello')
+st.write('Yes')
+
 if st.button("Show my age"):
     st.write("You are",age,"years old in year",currentyear)
