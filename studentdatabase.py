@@ -1,4 +1,11 @@
 import streamlit as st
+import pandas as pd
+
+st.set_page_config(layout='wide')
+
+database = pd.read_csv('scores.csv')
+
+st.dataframe(database,use_container_width=True)
 
 name = st.text_input("Enter name")
 
@@ -31,8 +38,16 @@ elif average >=35 and average <=86:
 elif average >=0 and average <=85:
    grade = "F"
 
-if st.button("Submit Student score"):
-   st.write(name,"your total score is ",total,". The average is",average,". And the grade is",grade)
+
+su1,su2 = st.columns(2)
+with su1:
+     if st.button("Submit Student score"):
+         st.success(f"{name} your total score is {total}. The average is{average}. And the grade is{grade}")
+         student_database = pd.DataFrame({'Name':[name],'Art':[Art],'History':[History],
+                                          'Math':[Math],'Total':[total],'Average':[average],'Grade':[grade]})
+         new_database = pd.concat([database,student_database],ignore_index=True)
+         new_database.to_csv('scores.csv',index=False)
+ 
 
 
 
