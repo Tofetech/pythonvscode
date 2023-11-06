@@ -14,6 +14,8 @@ bestshows = ["Spongbob","Tofetech","Mathquiz"]
 
 st.write(bestshows)
 
-# besthouses you uses a list because you want besthouses 
-# not besthouse so for more than 1 you use a list bestshows again use a list because 
-# it best shows no show favcorlor you yous a list because more than 1 you use a list 
+bestcolor = st.selectbox("Pick you best color",["Blue","Red","Green"])
+
+bestsubjects = st.radio("Bestsubjects",["Math","Science","English"])
+
+menu = st.sidebar.selectbox("Bestshows",["Spongbob","Tofetech","Mathquiz"])
