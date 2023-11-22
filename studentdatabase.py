@@ -42,9 +42,10 @@ elif average >=0 and average <=85:
 su1,su2 = st.columns(2)
 with su1:
      if st.button("Submit Student score"):
-         st.success(f"{name} your total score is {total}. The average is{average}. And the grade is{grade}")
-         student_database = pd.DataFrame({'Name':[name],'Art':[Art],'History':[History],
-                                          'Math':[Math],'Total':[total],'Average':[average],'Grade':[grade]})
+         st.success(f"{name} your total score is {total}. The average is {average}. And the grade is {grade}")
+         student_dict = {'Name':[name],'Art':[Art],'History':[History],
+                                          'Math':[Math],"English":[English], 'Total':[total],'Average':[average],'Grade':[grade]}
+         student_database = pd.DataFrame(student_dict)
          new_database = pd.concat([database,student_database],ignore_index=True)
          new_database.to_csv('scores.csv',index=False)
  
