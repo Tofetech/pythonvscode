@@ -197,6 +197,8 @@ with shoe1:
   st.write("Added to cart")
   price += 49
 
+
+
 with shoe2:
  if st.checkbox("Black Rocket Dog Women's Cheery Sneaker: 24"):
   st.write("Added to cart")
