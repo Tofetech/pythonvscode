@@ -3,18 +3,16 @@ import pandas as pd
 
 st.set_page_config(layout='wide')
 
-menu = st.sidebar.selectbox('menu', ["Hospital painent Registration", "PATIENT CONTACT DETAILS" ])
+menu = st.sidebar.selectbox('menu', ["Patient Registration", "Patient Database" ])
 
 database = pd.read_csv('hospital.csv')
 
-st.dataframe(database,use_container_width=True)
-
-st.title("Hospital Paient Registration")
+st.title("Hospital Patient Registration")
 
 subt,subt2 = st.columns(2)
 
 with subt:
-    select = st.radio("select Title",["Mr","Ms","Miss","Mrs"],horizontal=True)
+    select = st.radio("Select title",["Mr","Ms","Miss","Mrs"],horizontal=True)
 
 with subt2:
     regdate = st.date_input("Data of registration")
@@ -38,10 +36,10 @@ with p2:
 dat1,dat2 = st.columns(2)
 
 with dat1:
-       birth = st.date_input("Date of Birth")
+       birth = st.date_input("Date of birth")
 
 with dat2:
-     gender = st.radio("select ",["Male","Female"],horizontal=True)
+     gender = st.radio("Select gender",["Male","Female"],horizontal=True)
 
 st.title("PATIENT CONTACT DETAILS")
 
@@ -64,7 +62,7 @@ with hpe2:
 ctpc1,ctpc2 = st.columns(2)
 
 with ctpc1:
-     city = st.text_input("City]]Town")
+     city = st.text_input("City/Town")
 
 with ctpc2:
      postcode = st.text_input("Postcode")
