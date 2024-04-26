@@ -52,5 +52,10 @@ if choose == 'Register Staff':
     but1,but2 = st.columns(2)
 
     with but1:
-     if st.button("Submit Employe data"):
+     if st.button("Submit Employee data"):
        st.success(f"You have submited we will get back to you shortly")
+
+
+if choose == "Staff Database":
+   pass
+   

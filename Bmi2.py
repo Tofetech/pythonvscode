@@ -35,3 +35,8 @@ if submit:
             st.warning("Your Bmi is {mass} and you are **OVERWEIGHT**")
         elif mass >= 30:
             st.error("Your Bmi is {mass} and you are**OBESE**")
+
+
+x = int(float(input("Enter s flost number: ")))
+y = x * 2
+print (y)

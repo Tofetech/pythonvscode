@@ -13,5 +13,21 @@ st.write(car)
 
 dataframe = pd.DataFrame(car)
 
-st.dataframe(dataframe,use_container_width=True)
+st.table(dataframe)
 
+#create a dictionary of messi and Ronaldo with the following attributes:
+#the country they play for
+#the clubs they play for
+#how many games played
+#how many goals scored
+#how many assist made
+
+#then convert to a table
+
+football = {'Name':['Ronaldo'],'Country': ['portugal'],'clubs': ["21"],'Games': ['673'],'Goals': ['1100'],'Assist': ['800'], 'Name': ['Messi'],'Country': ['Argentina'], 'clubs': ["61"],'Games': ['519'], 'Goal': ["1000"], 'Assist': ['600']}
+
+st.write(football)
+
+dataframe = pd.DataFrame(football)
+
+st.table(dataframe)

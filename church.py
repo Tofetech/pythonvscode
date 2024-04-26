@@ -1,29 +1,35 @@
-#HOMEWORK
-#A church asks members of their age:
-#if the member is less than 13, please go to the kids class
-#if the member is from 13 to 19, please go to the teens class
-#if the member is older than 20, you can go to the adult class
-#Any age between 0 - 2 is not not allowed yet in church
-#Any age below 0 is an error, not acceptable
+# SIMPLE TYPE
+#create a simple church age range database
+#This will get the name, age, gender of the church member
+
+#Make sure you group members in different category based on their age 
+# (Kids(3- 12), Teens(13-19), Youth(20-35), Adult(36-64), Elders(65+) )
+
 
 import streamlit as st
 
-st.title("Church classes")
+st.title("Church")
 
-age = st.number_input("How old are you:",value=3,step= 1,format="%d")
+name = st.text_input("What is your name")
 
+gender = st.radio(" What is you gender",["Boy","Girl"],horizontal=True)
 
+age = st.number_input("How old are you",0)
 
-if (age <  13):
-  st.write("Please go to the kids class")
+if st.button("Which group"):
+  if (age < 13):
+   st.write("Go to the Kids group")
 
+  if (age < 20):
+    st.write("Go to the teens group")
 
-elif (age > 12) and (age <20):
-  st.write("Please go to the teens class")
+  if (age < 36):
+    st.write("Go to the Youth group")
 
+  if (age < 65):
+    st.write("Go to the Adult group")
 
-elif (age > 19):
-  st.write("Please go to the adult class") 
-
+  if (age > 64):
+    st.write("Go to the Elders group")
 
 

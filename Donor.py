@@ -47,7 +47,9 @@ if menu == 'Registration':
 
 if menu == 'Database':
    
-    st.dataframe(database,use_container_width=True)
+    st.table(database)
+
+
 
 
  
