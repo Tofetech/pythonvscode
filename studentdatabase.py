@@ -7,7 +7,6 @@ database = pd.read_csv('scores.csv')
 
 
 
-sub1,sub2 = st.columns(2)
 
 menu= st.sidebar.selectbox('menu',['Submit scores','Database'])
 
@@ -22,6 +21,9 @@ if menu == 'Database':
 if menu  == 'Submit scores':
   
   name = st.text_input("Enter name")
+
+  sub1,sub2 = st.columns(2)
+
   
   with sub1:
    Math = st.number_input("Enter the student`s score for math",0,100)
