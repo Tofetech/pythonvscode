@@ -9,6 +9,19 @@
 
 import streamlit as st
 age = st.number_input("What is your age",0)
-if age >0 and <12:
-    st.write("")
+if age >0 and age <13:
+    st.write("You are a child")
+elif age >12 and age <20:
+    st.write("You are a teen")
+elif age >19 and age <41:
+    st.write("You are a Youths")
+elif age >40:
+    st.write("You are a adult")
+
+if st.button('cheak age'):
+ st.write("You are ",age)
+    
+
+
+
 
