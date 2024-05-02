@@ -64,7 +64,4 @@ with yes1:
 
 
 
-car_dict {
-    'Car Model' : ['Toyota', 'Mazda', 'Roland', 'BMW', 'Lamboughini']
-    'Year' : ['2022',"" ]
-}
+car_dict {'Car Model' : ['Toyota', 'Mazda', 'Roland', 'BMW', 'Lamboughini']'Year': ['2022',"" ]}
