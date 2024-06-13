@@ -16,11 +16,3 @@ salary = st.number_input("What is your yearly salary",0)
 if st.button("Which House"):
     if (salary > 100000 and salary <= 500000):
         st.write("You can buy a bungalow")
-
-    elif (salary > 500000 and salary <= 1000000):
-        st.write("You can buy a duplex")
-
-    elif (salary > 1000000 and salary <= 5000000):
-        st.write("You can buy a manshion")
-
-    
